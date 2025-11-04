@@ -1,5 +1,5 @@
 [submodule "gcc"]
-	path = gcc
+	path = tz-gcc
 	url = https://github.com/flyahn06/tz-gcc
 [submodule "tz-firmware"]
 	path = tz-firmware
