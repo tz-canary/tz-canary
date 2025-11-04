@@ -1,3 +1,6 @@
 [submodule "gcc"]
 	path = gcc
 	url = https://github.com/flyahn06/tz-gcc
+[submodule "tz-firmware"]
+	path = tz-firmware
+	url = https://github.com/tz-canary/tz-firmware
