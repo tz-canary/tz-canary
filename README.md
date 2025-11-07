@@ -1,11 +1,11 @@
-# TISC: TEE-Isolated Stack Canary on Arm TrustZone
+# SISC: SPE-Isolated Stack Canary on Arm TrustZone
 
 ## GCC
 
-This repository provides GCC with `-fstack-protector-tee` option, which enables isolation of stack canary with Trusted Execution Environment (TEE)
-on Arm TrustZone.
+This repository provides GCC with `-fstack-protector-tee` option, which enables isolation of stack canary with Secure Processing Environment(SPE)
+on TF-M.
 
-Refer to [this repository](https://github.com/flyahn06/tz-gcc/) for further information.
+Refer to [this repository](https://github.com/tz-gcc/tz-gcc/) for further information.
 
 ### Build
 
@@ -16,7 +16,8 @@ cd gcc/build
   --disable-bootstrap \
   --disable-multilib \
   --enable-languages=c,c++ \
-  --enable-checking=yesmake clearn
+  --enable-checking=yes
+make clear
 make -j`nproc`
 ```
 
@@ -25,7 +26,7 @@ make -j`nproc`
 
 ### Run
 
-Use `-fstack-protector-tee` to enable tee-isolated stack canary protection.
+Use `-fstack-protector-tee` to enable spe-isolated stack canary protection.
 
 ```c
 // test.c
